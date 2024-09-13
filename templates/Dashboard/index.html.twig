@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="fas fa-home"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-address-book"></i>
+                                <a href="{{ path('app_contact_index') }}">View Contacts</a>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-box"></i>
+                                users
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-users"></i>
+                                Users
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Welcome to the Dashboard</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                            <div class="admin-header">
+                                <form action="{{ path('app_logout') }}" method="post">
+                                    <button type="submit">Logout</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Example of a card for summary stats -->
+                    <div class="col-md-4">
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-header">Contacts</div>
+                            <div class="card-body">
+                                <h5 class="card-title">150 Contacts</h5>
+                                <p class="card-text">Manage your contacts from here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-header">Services</div>
+                            <div class="card-body">
+                                <h5 class="card-title">85 Services</h5>
+                                <p class="card-text">Check and update your Services here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card text-white bg-warning mb-3">
+                            <div class="card-header">Users</div>
+                            <div class="card-body">
+                                <h5 class="card-title">200 Users</h5>
+                                <p class="card-text">Manage your users and their permissions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example of table for recent activities -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        Recent Activity
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Activity</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Added new contact "John Doe"</td>
+                                <td>2024-09-12</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Updated product "Product 1"</td>
+                                <td>2024-09-11</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Deleted user "Alice"</td>
+                                <td>2024-09-10</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+{% endblock %}

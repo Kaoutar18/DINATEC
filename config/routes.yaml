@@ -7,3 +7,14 @@ controllers:
 default:
     path: /
     controller: App\Controller\DefaultController::index
+
+dashboard:
+    path: /admin
+    controller: App\Controller\DashboardController::index
+
+login:
+        path: /login
+        controller: App\Controller\SecurityController::login
+
+
+

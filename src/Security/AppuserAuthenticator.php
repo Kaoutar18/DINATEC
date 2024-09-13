@@ -28,15 +28,17 @@ class AppuserAuthenticator extends AbstractLoginFormAuthenticator
 
     public function authenticate(Request $request): Passport
     {
-        $username = $request->getPayload()->getString('username');
+        $username = $request->request->get('username'); // Correction ici
+        $password = $request->request->get('password'); // Correction ici
+        $csrfToken = $request->request->get('_csrf_token'); // Correction ici
 
         $request->getSession()->set(SecurityRequestAttributes::LAST_USERNAME, $username);
 
         return new Passport(
             new UserBadge($username),
-            new PasswordCredentials($request->getPayload()->getString('password')),
+            new PasswordCredentials($password),
             [
-                new CsrfTokenBadge('authenticate', $request->getPayload()->getString('_csrf_token')),
+                new CsrfTokenBadge('authenticate', $csrfToken),
                 new RememberMeBadge(),
             ]
         );
@@ -48,9 +50,8 @@ class AppuserAuthenticator extends AbstractLoginFormAuthenticator
             return new RedirectResponse($targetPath);
         }
 
-        // For example:
-        // return new RedirectResponse($this->urlGenerator->generate('some_route'));
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
+        // Définir la redirection par défaut après la connexion réussie
+        return new RedirectResponse($this->urlGenerator->generate('login')); // Remplacez 'admin_dashboard' par la route appropriée
     }
 
     protected function getLoginUrl(Request $request): string
