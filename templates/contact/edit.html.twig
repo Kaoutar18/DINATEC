@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'dashboard/base.html.twig' %}
 
 {% block title %}Edit Contact{% endblock %}
 
@@ -7,7 +7,7 @@
 
     {{ include('contact/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_contact_index') }}">back to list</a>
+    <a href="{{ path('app_contact_index') }}" class="btn btn-primary">back to list</a>
 
     {{ include('contact/_delete_form.html.twig') }}
 {% endblock %}

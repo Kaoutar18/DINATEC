@@ -1,6 +1,7 @@
 twig:
-    file_name_pattern: '*.twig'
+  default_path: '%kernel.project_dir%/templates'  # Chemin vers ton dossier de templates
+  # Les autres configurations peuvent être ajoutées ici
+  file_name_pattern: '*.twig'  # Ceci est le pattern de recherche des fichiers Twig
 
-when@test:
-    twig:
-        strict_variables: true
+
+

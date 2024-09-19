@@ -17,7 +17,7 @@ class Contact
     #[ORM\Column(length: 255)]
     private ?string $nom = null;
 
-    #[ORM\Column(type: Types::SMALLINT)]
+    #[ORM\Column(type: Types::INTEGER)]
     private ?int $numero = null;
 
     #[ORM\Column(length: 255)]

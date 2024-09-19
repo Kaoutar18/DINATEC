@@ -904,23 +904,31 @@ a:focus {
 
 // end info section
 
-/* footer section*/
 
-.footer_section {
-  position: relative;
-  background-color: $white;
-  text-align: center;
 
-  p {
-    color: #252525;
-    padding: 25px 0;
-    margin: 0;
+// SCSS for the footer section
 
-    a {
-      color: inherit;
-    }
+  // Container inside the footer
+  .container {
+    display: flex;
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
   }
+
+// Ensure that the body and html take up full height
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
+// Make sure the main content area pushes the footer down
 
-// end footer section
+
+// Footer styles
+.footer_section {
+  background-color: #f8f9fa; // Light background color
+  padding: 20px 0; // Padding for top and bottom
+  text-align: center; // Center-align text
+  width: 100%; // Full width
+}
+

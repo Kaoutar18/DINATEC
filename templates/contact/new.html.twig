@@ -1,11 +1,22 @@
-{% extends 'base.html.twig' %}
+{% extends 'dashboard/base.html.twig' %}
 
-{% block title %}New Contact{% endblock %}
+{% block title %}Create New Contact{% endblock %}
 
 {% block body %}
-    <h1>Create new Contact</h1>
+    <div class="container mt-4">
+        <h1 class="mb-4">Create New Contact</h1>
 
-    {{ include('contact/_form.html.twig') }}
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Contact Form</h5>
+            </div>
+            <div class="card-body">
+                {{ include('contact/_form.html.twig') }}
+            </div>
+        </div>
 
-    <a href="{{ path('app_contact_index') }}">back to list</a>
+        <div class="mt-4">
+            <a href="{{ path('app_contact_index') }}" class="btn btn-primary">Back to List</a>
+        </div>
+    </div>
 {% endblock %}

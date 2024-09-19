@@ -10,11 +10,28 @@ default:
 
 dashboard:
     path: /admin
-    controller: App\Controller\DashboardController::index
+    controller: App\Controller\DashboardController::base
 
 login:
         path: /login
         controller: App\Controller\SecurityController::login
+
+
+apropos:
+    path: /apropos
+    controller: App\Controller\aproposController::apropos
+
+Localisation:
+    path: /localisation
+    controller: App\Controller\localisationController::Localisation
+
+contact_Form:
+    path: /contact_Form
+    controller: App\Controller\ContactFormController::contact_Form
+
+
+
+
 
 
 

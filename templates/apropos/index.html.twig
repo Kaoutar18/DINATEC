@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Apropos!{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+
+
+    {% block about %}
+
+        <section class="about_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <div class="detail-box pr-md-2">
+                            <div class="heading_container">
+                                <h2 class="para">
+                                    Qui Sommes Nous
+                                </h2>
+                            </div>
+                            <p class="para">
+                                DINATEC au capital de 1 000.000,00 DHS, une progression réussi, est fondée en 2007, l’entreprise  englobe plusieurs corps de métiers répartit en trois départements:
+                                -Tous Corps d’Etats (TCE)
+                                -Corps d’Etats Techniques (CET)
+                                -Corps d’Etats Services (CES)
+                                Fidèle à ses valeurs de services, DINATEC privilégie la qualité de ses prestations, la fiabilité de son équipe, la réactivité de son support.
+                                Le développement de la Société s'organise autour de grands comptes marocains de l'Industrie et des Services, de Collectivités locales, des Hôtels ainsi que de PME / PMI.
+                                Avec une quinzaine d'années d'expérience, l'équipe DINATEC offre à ses clients des prestations d’installation « clé en main » incluant les nouvelles technologies.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 px-0">
+                        <div class="img-box ">
+                            <img src="images/sec.png" class="box_img" alt="about img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about section ends -->
+    {% endblock %}
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<style>
+    .para {
+        color: white !important;; /* Couleur du texte en blanc */
+    }
+    .image img {
+        width: 100%; /* Largeur de l'image */
+        height: 100%; /* Hauteur de l'image */
+        object-fit: cover; /* Adapter l'image pour couvrir toute la zone */
+
+    }
+</style>
     <!-- Basic -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,20 +43,22 @@
     <link href="css/responsive.css" rel="stylesheet" />
 </head>
     {% block body %}
+
+    {% block header %}
     <div class="hero_area">
         <div class="hero_bg_box">
-            <img src="images/hero-bg.jpg" alt="">
+
         </div>
+
         <!-- header section strats -->
         <header class="header_section">
             <div class="header_top">
                 <div class="container-fluid header_top_container">
-
                     <div class="contact_nav">
-                        <a href="">
+                        <a  class="nav-link" href="{{ path('Localisation') }}">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <span>
-                Localisation
+                 Présence Au maroc
               </span>
                         </a>
                         <a href="">
@@ -56,7 +70,7 @@
                         <a href="">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                             <span>
-                demo@gmail.com
+                DINATEC@gmail.com
               </span>
                         </a>
                     </div>
@@ -76,10 +90,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="header_bottom">
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg custom_nav-container ">
-                        <a class="navbar-brand " href="base.html.twig"> DINATEC </a>
+                        <a class="navbar-brand " href="{{'/' }}"> DINATEC </a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class=""> </span>
@@ -88,10 +103,10 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav  ">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="Quisommenous.html.twig">Qui sommes nous  <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="{{ path('apropos') }}">A propos <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="about.html"> Notre présence au maroc </a>
+                                    <a class="nav-link" href="{{ path('Localisation') }}">  présence au maroc </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="service.html">Nous connaitre </a>
@@ -108,13 +123,13 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Nos expertises </a>
+                                    <a class="nav-link" href="{{ path('contact_Form') }}">Nos expertises </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Nos Réferences </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact </a>
+                                    <a class="nav-link" href="{{ path('contact_Form') }}">Contact </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Recrutement  </a>
@@ -126,7 +141,9 @@
                 </div>
             </div>
         </header>
+        {% endblock %}
         <!-- end header section -->
+
         <!-- slider section -->
         <section class="slider_section ">
             <div id="customCarousel1" class="carousel slide" data-ride="carousel">
@@ -143,7 +160,7 @@
                                         <p>
 le developpement de la Société s'organise autour de grands comptes marocains de l'industrie et des services,de collectivités locales ,des residences ,des hotels ainsi que de PME /PMI                                         </p>
                                         <div class="btn-box">
-                                            <a href="" class="btn1">
+                                            <a href="{{ path('contact_Form') }}" class="btn1">
                                                 Contact
                                             </a>
                                         </div>
@@ -337,46 +354,7 @@ le developpement de la Société s'organise autour de grands comptes marocains d
 
     <!-- about section -->
 
-    <section class="about_section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-5 offset-md-1">
-                    <div class="detail-box pr-md-2">
-                        <div class="heading_container">
-                            <h2 class="">
-                                Qui Sommes Nous
-                            </h2>
-                        </div>
-                        <p class="detail_p_mt">
-                            DINATEC au capital de 1 000.000,00 DHS, une progression réussi, est fondée en 2007, l’entreprise  englobe plusieurs corps de métiers répartit en trois départements:
-                            -Tous Corps d’Etats (TCE)
-                            -Corps d’Etats Techniques (CET)
-                            -Corps d’Etats Services (CES)
-                            Fidèle à ses valeurs de services, DINATEC privilégie la qualité de ses prestations, la fiabilité de son équipe, la réactivité de son support.
-                            Le développement de la Société s'organise autour de grands comptes marocains de l'Industrie et des Services, de Collectivités locales, des Hôtels ainsi que de PME / PMI.
-                            Avec une quinzaine d'années d'expérience, l'équipe DINATEC offre à ses clients des prestations d’installation « clé en main » incluant les nouvelles technologies.
-                        </p>
-                        <a href="about.html" class="">
-                           Lire Plus
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 px-0">
-                    <div class="img-box ">
-                        <img src="images/about-img.jpg" class="box_img" alt="about img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- about section ends -->
-
-    <!-- team section -->
-
-
-
-    <!-- end team section -->
 
     <!-- contact section -->
     <section class="contact_section ">
@@ -385,7 +363,7 @@ le developpement de la Société s'organise autour de grands comptes marocains d
             <div class="row">
                 <div class="col-md-6 px-0">
                     <div class="img-box ">
-                        <img src="images/contact-img.jpg" class="box_img" alt="about img">
+                        <img src="images/sec.png" class="box_img" alt="about img">
                     </div>
                 </div>
                 <div class="col-md-5 mx-auto">
@@ -402,14 +380,6 @@ le developpement de la Société s'organise autour de grands comptes marocains d
                             <div class="form-row">
                                 <div class="form-group col-lg-6">
                                     <input type="text" class="form-control" placeholder="Numero Télephone" />
-                                </div>
-                                <div class="form-group col-lg-6">
-                                    <select name="" id="" class="form-control wide">
-                                        <option value="">Select Service</option>
-                                        <option value=""> Tous Corps d’Etats (TCE)</option>
-                                        <option value=""> Corps d’Etats Techniques (CET)</option>
-                                        <option value=""> Corps d’Etats Services (CES)</option>
-                                    </select>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -435,12 +405,10 @@ le developpement de la Société s'organise autour de grands comptes marocains d
     </section>
     <!-- end contact section -->
 
-    <!-- client section -->
 
-
-    <!-- end client section -->
 
     <!-- info section -->
+    {% block footer %}
     <section class="info_section ">
         <div class="container">
             <div class="info_top">
@@ -452,10 +420,10 @@ le developpement de la Société s'organise autour de grands comptes marocains d
                     </div>
                     <div class="col-md-5 ">
                         <div class="info_contact">
-                            <a href="">
+                            <a class="nav-link" href="{{ path('Localisation') }}">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <span>
-                  localisation
+                  Présence Au maroc
                 </span>
                             </a>
                             <a href="">
@@ -519,8 +487,8 @@ le developpement de la Société s'organise autour de grands comptes marocains d
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="about.html">
-                                        Qui Sommes nous
+                                    <a href="{{ path('apropos') }}">
+                                        A propos
                                     </a>
                                 </li>
                                 <li>
@@ -529,13 +497,13 @@ le developpement de la Société s'organise autour de grands comptes marocains d
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="team.html">
-                                        Team
+                                    <a class="nav-link" href="{{ path('Localisation') }}">
+                                         presences au maroc
                                     </a>
                                 </li>
                                 <li class="mb-0">
                                     <a href="contact.html">
-                                        Contacter nous
+                                        Contact
                                     </a>
                                 </li>
                             </ul>
@@ -549,6 +517,7 @@ le developpement de la Société s'organise autour de grands comptes marocains d
     <!-- end info_section -->
 
     <!-- footer section -->
+
     <footer class="footer_section">
         <div class="container">
             <p>
@@ -558,7 +527,7 @@ le developpement de la Société s'organise autour de grands comptes marocains d
         </div>
     </footer>
     <!-- footer section -->
-
+    {% endblock %}
     <!-- jQery -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- popper js -->
@@ -574,6 +543,6 @@ le developpement de la Société s'organise autour de grands comptes marocains d
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
     <!-- End Google Map -->
-
     {% endblock %}
+
 </html>

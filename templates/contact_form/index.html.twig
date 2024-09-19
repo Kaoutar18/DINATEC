@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Apropos!{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 px-0">
+                    <div class="img-box">
+                        <img src="images/sec.png" class="box_img" alt="about img">
+                    </div>
+                </div>
+                <div class="col-md-6 mx-auto">
+                    <div class="form_container">
+                        <div class="heading_container heading_center">
+                            <h2>Contact</h2>
+                        </div>
+                        <form id="contact-form" action="{{ path('contact_Form') }}" method="post">
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <input type="text" class="form-control" name="contact[nom]" placeholder="Nom" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-lg-6">
+                                    <input type="text" class="form-control" name="contact[numero]" placeholder="numero" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <input type="email" class="form-control" name="contact[mail]" placeholder="email" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <textarea class="form-control" name="contact[message]" placeholder="message"></textarea>
+                                </div>
+                            </div>
+                            <div class="btn_box">
+                                <button type="submit">
+                                    Envoyer
+                                </button>
+                            </div>
+                        </form>
+                        <div id="message-box" style="display: none; color: green;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche le comportement par défaut du formulaire
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    var messageBox = document.getElementById('message-box');
+                    if (data.status === 'success') {
+                        messageBox.textContent = data.message;
+                        messageBox.style.display = 'block';
+                        form.reset(); // Réinitialise le formulaire
+                    } else {
+                        messageBox.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+                        messageBox.style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+{% endblock %}
