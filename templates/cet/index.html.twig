@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TCE !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+    <body>
+
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 px-0">
+                    <div class="img-box">
+                        <img src="images/image3.png" class="box_img" alt="about img">
+                        <img src="images/image4.png" class="box_img" alt="about img">
+                    </div>
+                </div>
+                <div class="col-md-6 mx-auto">
+                    <div class="form_container">
+                        <div class="heading_container heading_center">
+                            <p>
+                                Les attentes sur les bâtiments d'aujourd'hui ont changé. Ils doivent devenir plus durables, hyper-efficaces, résilients et centrés sur les personnes. Si votre système de gestion technique des bâtiments n'est pas prêt pour l'avenir, vous vous privez des avancées technologiques et des dispositifs compatibles avec l’IoT qui permettent d'atteindre les objectifs de durabilité, de réduire les coûts d'exploitation, d'améliorer l'expérience des occupants, d'améliorer la productivité et d'augmenter la valeur du bâtiment.
+                            </p>
+                            <p> Le département Corps d’Etats Techniques (CET) rassemble sous le même toit tous les corps d’état Techniques nécessaireses:</p>
+                            <p>   Electricité,
+                            </p>
+                            <p > Energie Solaire,
+                            </p>
+                            <p> Domotique,
+                            </p>
+                            <p> Vidéosurveillance,
+                            </p>
+                            <p > Détection Incendie,
+                            </p>
+                            <p> Télédistribution,
+                            </p>
+                            <p>  Téléphonie,
+                            </p>
+                            <p>  Réseaux Informatique ,
+                            </p>
+                            <p>      Contrôle d'accès,
+                            </p>
+                            <p>  Nous vous apportons notre savoir-faire pour la réalisation de tous travaux d’installation, de maintenance et de dépannage .
+                                Réactive et disponible, notre équipe réalise vos travaux efficacement et rapidement.
+                            </p>
+                            <img src="images/image5.png" class="box_img" alt="about img">
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+    </section>
+    </body>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

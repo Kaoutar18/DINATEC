@@ -474,6 +474,38 @@ iframe {
     opacity: 1;
   }
 }
+/* Pour afficher le menu au survol */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  opacity: 1; /* Rendre l'élément visible */
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Animation de transition */
+}
+
+/* Cache le menu avec un effet d'opacité */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Animation de transition */
+  background-color: #f8f9fa; /* Couleur de fond plus claire pour la lisibilité */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre douce pour plus de profondeur */
+  border-radius: 5px; /* Bordures arrondies pour un look moderne */
+}
+
+/* Ajout de padding et ajustement du style des éléments de la liste */
+.dropdown-menu .dropdown-item {
+  padding: 10px 20px;
+  color: #333; /* Couleur du texte */
+  transition: background-color 0.3s ease-in-out; /* Transition lors du survol */
+}
+
+/* Changement de couleur au survol des éléments */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #007bff; /* Changement de fond au survol */
+  color: #fff; /* Couleur du texte au survol */
+}
+
 
 
 

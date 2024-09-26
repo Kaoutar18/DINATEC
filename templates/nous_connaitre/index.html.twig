@@ -1,0 +1,143 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous Connaitre !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+<style>
+    /* Style des titres */
+    .heading_container h2,
+    .para h2 {
+        font-size: 2.5rem; /* Taille des titres */
+        font-weight: bold;
+        color: #007bff; /* Couleur bleu pour les titres */
+        text-transform: uppercase; /* Capitalisation des titres */
+        margin-bottom: 1rem; /* Espace sous le titre */
+        border-bottom: 2px solid #007bff; /* Ligne sous les titres pour les accentuer */
+        padding-bottom: 0.5rem; /* Espacement interne */
+        letter-spacing: 1.5px; /* Espacement entre les lettres */
+    }
+
+    /* Couleur blanche pour tous les paragraphes */
+    .para, .para p {
+        font-size: 1.1rem; /* Taille du texte */
+        line-height: 1.8; /* Interligne pour la lisibilité */
+        color: #ffffff !important; /* Assure que les paragraphes sont bien en blanc */
+        margin-bottom: 1rem; /* Espace sous chaque paragraphe */
+    }
+
+    /* Espace et marges des sections */
+    .para {
+        padding: 0 0rem; /* Padding pour éviter que le texte ne touche les bords */
+        max-width: 100vw;
+    }
+
+    /* Ajustement de la taille et de la marge des conteneurs */
+    .container-fluid {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .detail-box {
+        padding: 0rem;
+        width: 100vw;
+    }
+
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+
+    .col-md-5, .col-md-6 {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Image responsive */
+    .img-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Fond sombre pour contraster avec le texte blanc */
+    .about_section {
+        background-color: #333; /* Fond foncé */
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+    }
+
+
+
+
+</style>
+
+    {% block about %}
+
+        <section class="about_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5 offset-md-1">
+                        <div class="detail-box ">
+                            <div class="heading_container">
+                                <h2 class="para">
+                                    Nous Connaitre
+                                </h2>
+                            </div>
+                            <h2 class="para">
+                                Nos valeurs
+                            </h2>
+                            <p class="para">
+                                L’entreprise Dinatec, sous l’impulsion de son fondateur Hakim Nedjar, a été créée autour de quatre valeurs fondatrices:
+                            <h2 class="para">    L’esprit d’équipe
+                                <h2 class="para">     Mener à bien un projet repose sur une coopération, non seulement des équipes de Dinatec maître d’œuvre, mais également avec le maître d’ouvrage, vous, initiateur du projet.
+                            <h2 class="para">        La qualité
+                                <h2 class="para">     Un travail de qualité, réalisé dans les règles de l’art, pour la plus grande satisfaction du client.
+                                <h2 class="para">       La responsabilité
+                                    <h2 class="para">     L’entreprise Dinatec s’engage au côté de son client, pour une parfaite exécution des travaux, en toute bonne foi.
+                                    <h2 class="para">        La transparence
+                                        <h2 class="para">  Dinatec agit en toute transparence avec son client, à la fois sur les techniques et les matériaux employés, sur les coûts et la mise en œuvre de votre projet.
+                                        <h2 class="para">       Notre Démarche
+                                            <h2 class="para">      L’entreprise Dinatec s’engage sur le choix de la qualité : qualité des offres proposées, des suivis de chantier, des réalisations. Nous pouvons résumer notre démarche en 4 engagements forts :
+                                                <h2 class="para">   Un rendez-vous garanti dans les 24 heures
+                                                    <h2 class="para">   Après un premier contact téléphonique ou par mail dans les 24 h, nous vous proposerons un RDV physique dans les 48 heures avec un chef de chantier fort de 10 années d’expérience
+                                                        <h2 class="para">   Notre démarche qualité ne peut s’appuyer que sur la visite du bâtiment à rénover, de l’observation des contraintes et particularités de votre projet
+                                            <h2 class="para">     Un devis gratuit
+                                                <h2 class="para">   Après le rendez-vous physique, Dinatec s’engage à vous proposer une estimation gratuite dans les 3 jours, et vous établir un devis gratuitement dans les 5 jours suivants
+                                                    <h2 class="para">     Ce devis vaut engagement pour Dinatec en cas de signature de contrat, le montant indiqué dans le devis, sauf nouvelles demandes, ne sera pas dépassé
+                                                <h2 class="para">        Des conseils personnalisés
+                                                    <h2 class="para">    Tout au long de votre projet, les équipes de Dinatec, responsable de chantier ou d’équipes de nos différents corps de métier s’engagent à vous conseiller sur les matériaux à employer et à vous expliquer les techniques choisies pour réaliser les différents travaux.
+                                                        <h2 class="para">     La mise en place d’un planning de réalisation
+                                                    <h2 class="para">    A la signature du contrat, le responsable de chantier vous présentera un planning de réalisation pour votre chantier sur lequel Dinatec s’engage
+                                                    <h2 class="para">        Nos Engagements
+                                                    <h2 class="para">     Qualité
+                                                        <h2 class="para">    Dinatec s’engage à réaliser tous vos projets en veillant à la qualité de l’exécution des travaux. Dinatec, entreprise tous corps d’état regroupe différents corps de métiers, des équipes expérimentées, passionnées par leurs métiers.
+                                                        <h2 class="para">      Conseils
+                                                            <h2 class="para">   Tout au long de votre chantier, l’entreprise Dinatec s’engage à vous conseiller sur les matériaux les plus pertinents pour votre projet, les techniques les plus adaptées.
+                                                            <h2 class="para">    Règles de l’art</h2>
+                                                            <h2 class="para">   Dinatec, entreprise générale du bâtiment veille à ce que ses équipes travaillent dans le respects des règles de l’art de la construction et de la rénovation.
+                                                                <h2 class="para">        Interlocuteur unique
+                                                                    <h2 class="para">      Un interlocuteur unique gère l'ensemble de votre projet, en coordonnant l'action de plusieurs experts. Il est votre voix auprès de ses équipes, et le porte-parole des experts auprès de vous, afin de vous garantir un service de qualité.
+                                Nous désignons pour chaque client un Chargé d'Affaires spécialisé dans votre secteur d'activité, qui est votre interlocuteur unique pendant toute la durée de notre partenariat.
+                                Nous connaissons tous des prestataires ou des fournisseurs qui mettent nos nerfs à rude épreuve : la moindre demande d’intervention ou d’information se transforme alors en parcours du
+                                combattant…nous laissant errer de service en service en quête désespérée d’une simple réponse à nos questions….
+                                Pour un acquéreur comme pour vos lots, un seul interlocuteur, c’est plus de réactivité, de confort et de sérénité tout au long du chantier.
+                                                                </h2>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- about section ends -->
+    {% endblock %}
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

@@ -25,11 +25,31 @@ Localisation:
     path: /localisation
     controller: App\Controller\localisationController::Localisation
 
-contact_Form:
-    path: /contact_Form
-    controller: App\Controller\ContactFormController::contact_Form
+contact_form:
+    path: /contact_form
+    controller: App\Controller\ContactFormController::contact_form
 
 
+nous_connaitre:
+    path: /nous_connaitre
+    controller: App\Controller\NousConnaitreController::nous_connaitre
+
+tce:
+    path: /tce
+    controller: App\Controller\tceController::tce
+
+cet:
+    path: /cet
+    controller: App\Controller\CetController::cet
+
+ces:
+    path: /ces
+    controller: App\Controller\CesController::ces
+
+
+Maçonnerie :
+    path: /maconnerie
+    controller: App\Controller\MaconnerieContollerController::Maçonnerie
 
 
 

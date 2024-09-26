@@ -12,6 +12,37 @@
         object-fit: cover; /* Adapter l'image pour couvrir toute la zone */
 
     }
+    /* Masquer tous les menus par défaut */
+    .dropdown-menu {
+        display: none;
+    }
+
+    /* Afficher uniquement le menu principal au survol */
+    .nav-item.dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+
+    /* Masquer tous les sous-menus par défaut */
+    .dropdown-submenu .dropdown-menu {
+        display: none;
+    }
+
+    /* Afficher uniquement le sous-menu au survol de son parent */
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+        left: 100%; /* Le sous-menu s'affichera à droite du parent */
+        top: 0;
+        position: absolute;
+    }
+
+    /* Assurer que les sous-menus n'apparaissent pas au même endroit */
+    .nav-item .dropdown-menu {
+        position: relative;
+        z-index: 1000;
+    }
+
+
+
 </style>
     <!-- Basic -->
     <meta charset="utf-8" />
@@ -109,27 +140,77 @@
                                     <a class="nav-link" href="{{ path('Localisation') }}">  présence au maroc </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="service.html">Nous connaitre </a>
+                                    <a class="nav-link" href="{{ path('nous_connaitre') }}">Nous connaitre </a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="secteursDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Secteurs d'activité
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="secteursDropdown">
-                                        <li><a class="dropdown-item" href="TCE.html">tous Corps d'Etats (TCE)</a></li>
-                                        <li><a class="dropdown-item" href="CET.html">Corps d'Etas Technique (CET)</a></li>
-                                        <li><a class="dropdown-item" href="CES.html">Corps d'Etats Services (CES)</a></li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="{{ path('tce') }}">Tous Corps d'Etats (TCE)</a>
+                                            <ul class="dropdown-menu sub-menu tce-submenu">
+                                                <li><a class="dropdown-item" href="{{ path('Maçonnerie') }}" >Maconnerie</a></li>
+                                                <li><a class="dropdown-item" href="TCE_Renovation.html">    Revêtements de sols et de mur
+                                                    </a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Carrelage</a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Platerie</a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Peinture</a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Plomberie </a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Menuiserie du Bois </a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Menuiserie Aluminium & PVC
+                                                    </a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Plomberie </a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Climatisation  </a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Ascenseurs   </a></li>
+                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Portes Automatiques
+                                                    </a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="{{ path('cet') }}">Corps d'Etats Techniques (CET)</a>
+                                            <ul class="dropdown-menu sub-menu cet-submenu">
+                                                <li><a class="dropdown-item" href="CET_Construction.html">Electricité</a></li>
+                                                <li><a class="dropdown-item" href="CET_Renovation.html">    Energie Solaire
+                                                    </a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Domotique</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Vidéosurveillance</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">    Détection Incendie
+                                                    </a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Télédistribution</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Téléphonie</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Réseaux Informatique </a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Contrôle d'accès</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="{{ path('ces') }}">Corps d'Etats Services (CES)</a>
+                                            <ul class="dropdown-menu sub-menu cet-submenu">
+                                                <li><a class="dropdown-item" href="CET_Construction.html">Entretien de la picsine</a></li>
+                                                <li><a class="dropdown-item" href="CET_Renovation.html">Entretien de Jardin</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Nettoyage professionnel</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Désinsectisation</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Sécurité Evénementielle</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Surveillance et Gardinnage</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Hote et hotesses d'acceuil</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Animateurs</a></li>
+                                                <li><a class="dropdown-item" href="CET_Maintenance.html">Organisation des Evénements </a></li>
+
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
 
+
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ path('contact_Form') }}">Nos expertises </a>
+                                    <a class="nav-link" href="{{ path('contact_form') }}">Nos expertises </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Nos Réferences </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ path('contact_Form') }}">Contact </a>
+                                    <a class="nav-link" href="{{ path('contact_form') }}">Contact </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Recrutement  </a>
@@ -160,7 +241,7 @@
                                         <p>
 le developpement de la Société s'organise autour de grands comptes marocains de l'industrie et des services,de collectivités locales ,des residences ,des hotels ainsi que de PME /PMI                                         </p>
                                         <div class="btn-box">
-                                            <a href="{{ path('contact_Form') }}" class="btn1">
+                                            <a href="{{ path('contact_form') }}" class="btn1">
                                                 Contact
                                             </a>
                                         </div>
@@ -350,62 +431,6 @@ le developpement de la Société s'organise autour de grands comptes marocains d
         </div>
     </section>
 
-    <!-- service section ends -->
-
-    <!-- about section -->
-
-
-
-    <!-- contact section -->
-    <section class="contact_section ">
-        <div class="container-fluid">
-
-            <div class="row">
-                <div class="col-md-6 px-0">
-                    <div class="img-box ">
-                        <img src="images/sec.png" class="box_img" alt="about img">
-                    </div>
-                </div>
-                <div class="col-md-5 mx-auto">
-                    <div class="form_container">
-                        <div class="heading_container heading_center">
-                            <h2>Contact</h2>
-                        </div>
-                        <form action="">
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <input type="text" class="form-control" placeholder="Nom" />
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-lg-6">
-                                    <input type="text" class="form-control" placeholder="Numero Télephone" />
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <input type="email" class="form-control" placeholder="Email" />
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <input type="text" class="message-box form-control" placeholder="Message" />
-                                </div>
-                            </div>
-                            <div class="btn_box">
-                                <button>
-                                   Envoyer
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end contact section -->
-
-
 
     <!-- info section -->
     {% block footer %}
@@ -482,7 +507,7 @@ le developpement de la Société s'organise autour de grands comptes marocains d
                             </h5>
                             <ul class="info_menu">
                                 <li>
-                                    <a href="index.html">
+                                    <a href={{ path('apropos') }}>
                                         acceuil
                                     </a>
                                 </li>
@@ -492,7 +517,7 @@ le developpement de la Société s'organise autour de grands comptes marocains d
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="service.html">
+                                    <a href={{ path('apropos') }}>
                                         Services
                                     </a>
                                 </li>
@@ -502,7 +527,7 @@ le developpement de la Société s'organise autour de grands comptes marocains d
                                     </a>
                                 </li>
                                 <li class="mb-0">
-                                    <a href="contact.html">
+                                    <a href={{ path('contact_form') }}>
                                         Contact
                                     </a>
                                 </li>

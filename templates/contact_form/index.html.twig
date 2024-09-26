@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Apropos!{% endblock %}
+{% block title %}À propos !{% endblock %}
 
 {% block body %}
     {% block header %}
@@ -20,34 +20,35 @@
                         <div class="heading_container heading_center">
                             <h2>Contact</h2>
                         </div>
-                        <form id="contact-form" action="{{ path('contact_Form') }}" method="post">
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <input type="text" class="form-control" name="contact[nom]" placeholder="Nom" />
-                                </div>
+                        {{ form_start(form) }}
+                        <div class="form-row">
+                            <div class="form-group col">
+                                {{ form_row(form.nom, {'attr': {'placeholder': 'Nom', 'class': 'form-control'}}) }}
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col-lg-6">
-                                    <input type="text" class="form-control" name="contact[numero]" placeholder="numero" />
-                                </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-lg-6">
+                                {{ form_row(form.numero, {'attr': {'placeholder': 'Numéro', 'class': 'form-control'}}) }}
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <input type="email" class="form-control" name="contact[mail]" placeholder="email" />
-                                </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                {{ form_row(form.mail, {'attr': {'placeholder': 'Email', 'class': 'form-control'}}) }}
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col">
-                                    <textarea class="form-control" name="contact[message]" placeholder="message"></textarea>
-                                </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                {{ form_row(form.message, {'attr': {'placeholder': 'Message', 'class': 'form-control', 'rows': 4}}) }}
                             </div>
-                            <div class="btn_box">
-                                <button type="submit">
-                                    Envoyer
-                                </button>
-                            </div>
-                        </form>
-                        <div id="message-box" style="display: none; color: green;"></div>
+                        </div>
+                        <div class="btn_box">
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </div>
+                        {{ form_end(form) }}
+
+                        {% for flashMessage in app.flashes('success') %}
+                            <div class="alert alert-success">{{ flashMessage }}</div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -58,35 +59,4 @@
         {{ parent() }}
     {% endblock %}
 
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Empêche le comportement par défaut du formulaire
-
-            var form = event.target;
-            var formData = new FormData(form);
-
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
-                }
-            })
-                .then(response => response.json())
-                .then(data => {
-                    var messageBox = document.getElementById('message-box');
-                    if (data.status === 'success') {
-                        messageBox.textContent = data.message;
-                        messageBox.style.display = 'block';
-                        form.reset(); // Réinitialise le formulaire
-                    } else {
-                        messageBox.textContent = 'Une erreur est survenue. Veuillez réessayer.';
-                        messageBox.style.display = 'block';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        });
-    </script>
 {% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TCE !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+    <body>
+
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 px-0">
+                    <div class="img-box">
+                        <img src="images/image2.png" class="box_img" alt="about img">
+                    </div>
+                </div>
+                <div class="col-md-6 mx-auto">
+                    <div class="form_container">
+                        <div class="heading_container heading_center">
+                            <p>
+                                Nous sommes des experts en construction résidentielle, commerciale et industrielle, capables de gérer des projets de toutes tailles et complexités.
+                                Notre approche repose sur une collaboration étroite avec nos clients pour fournir des solutions personnalisées répondant à leurs besoins.    </p>
+                              <p> De plus, nous accordons une grande importance à la durabilité et à la réduction de notre empreinte environnementale dans tous nos projets, créant ainsi des bâtiments durables et éco énergétiques.
+                                Le département tous corps d’état (TCE) rassemble sous le même toit tous les corps d’état nécessaires:</p>
+                             <p>    Maçonnerie</p>
+                              <p > Revêtements de sols et de mur</p>
+                               <p> Carrelage</p>
+                              <p> Platerie</p>
+                               <p > Peinture</p>
+                              <p> Plomberie</p>
+                            <p>  Menuiserie du Bois</p>
+                            <p>  Menuiserie Aluminium & PVC</p>
+                            <p>   Climatisation</p>
+                            <p>   Ascenseurs</p>
+                            <p>    Portes Automatiques</p>
+
+
+
+
+                        </div>
+            </div>
+        </div>
+    </section>
+    </body>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}
