@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+
+        .row {
+            display: flex; /* Utilise Flexbox pour les lignes */
+            justify-content: space-around; /* Aligne les colonnes avec un espace égal */
+            margin-bottom: 20px; /* Espacement entre les lignes */
+            width: 100%; /* Prend toute la largeur */
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Aligne l'image et le texte verticalement */
+            align-items: center; /* Centre les éléments dans la colonne */
+            text-align: center; /* Centre le texte sous chaque image */
+        }
+            .para {
+                color: black !important; /* Couleur du texte en noir */
+                max-width: 400px; /* Largeur maximale pour le texte */
+                margin-left: 10px; /* Espace entre le texte et l'image */
+            }
+
+            .img-box img {
+                width: 200px;  /* Largeur fixe pour les images */
+                height: 200px; /* Hauteur fixe pour rendre les images carrées */
+                object-fit: cover; /* Recadre l'image pour remplir le carré sans déformer */
+                border-radius: 5px; /* Arrondit les coins si souhaité */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet visuel */
+            }
+
+
+    </style>
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image10.png" alt="Installation d’un mur en brique">
+                    </div>
+                    <p class="para">
+                       Les carreleurs ou carreleurs-mosaïste de Dinatec habille les sols, les murs et différents supports de carreaux ou de mosaïque. Sur un chantier de construction, de rénovation ou d’aménagement intérieur, il peut réaliser différentes missions : Pose de carrelage mural ou sol dans les différentes pièces de votre site (salle de bain, cuisine, séjour…), Réalisation d’une allée de jardin carrelée, Revêtement du sol d’un garage, d’un atelier ou d’un local professionnel avec du carrelage, Pose ou rénovation du carrelage de crédence de cuisine, Revêtement du tablier de baignoire, Carrelage de piscine, Décors urbains, Pose, rénovation ou remplacement de carrelage de façade…
+
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image11.png" alt="">
+                    </div>
+                    <p class="para">Fort d’une main d’œuvre très qualifiée, nous réalisons tous types de travaux de mosaïque :
+ <p class="para"> pose de pâte de verre</p>
+ <p class="para"> mosaïque de pierre</p>
+ <p class="para"> mosaïque de marbre</p>
+ <p class="para"> mosaïque de carrelage</p>
+                 <p class="para">   Quelle que soit votre demande de travaux de carrelage, Dinatec répond à vos besoins :
+   <p class="para"> Pose de carrelage et de faïence</p>
+  <p class="para">  Travail de la pierre et du marbre</p>
+  <p class="para"> Création de dallage</p>
+  <p class="para">  Coulage de chape liquide</p>
+  <p class="para">  Pose de béton ciré
+.</p>   
+                 
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image12.png" alt="">
+                    </div>
+                    <p class="para">Réalisation de tous types de terrasse en carrelage et pierre
+Préparation des supports
+Réalisation de chape en mortier compris forme de pente
+Etanchéité et drainage sous le revêtement carrelé
+Réalisation de tous types de décoration extérieure (petits murets, escaliers, jardinières, pose de galets...).</p> 
+
+                 
+                </div>
+                <!-- Ajoutez d'autres lignes de paragraphe et d'image ici -->
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

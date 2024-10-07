@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+
+        .row {
+            display: flex; /* Utilise Flexbox pour les lignes */
+            justify-content: space-around; /* Aligne les colonnes avec un espace égal */
+            margin-bottom: 20px; /* Espacement entre les lignes */
+            width: 100%; /* Prend toute la largeur */
+            flex-wrap: wrap;
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Aligne l'image et le texte verticalement */
+            align-items: center; /* Centre les éléments dans la colonne */
+            text-align: center; /* Centre le texte sous chaque image */
+        }
+            .para {
+                color: black !important; /* Couleur du texte en noir */
+                max-width: 400px; /* Largeur maximale pour le texte */
+                margin-left: 10px; /* Espace entre le texte et l'image */
+            }
+
+            .img-box img {
+                width: 200px;  /* Largeur fixe pour les images */
+                height: 200px; /* Hauteur fixe pour rendre les images carrées */
+                object-fit: cover; /* Recadre l'image pour remplir le carré sans déformer */
+                border-radius: 5px; /* Arrondit les coins si souhaité */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet visuel */
+            }
+
+
+    </style>
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image34.png" alt="">
+                    </div>
+                                        <p class="para"> Depuis  2007,
+                                        <p class="para"> nous installons, maintenons et dépannons 
+                                        <p class="para">vos systèmes de climatisation </p>
+<p class="para">Nos experts du génie climatique interviennent sur tous les types de matériels et sur les installations les plus complexes comme les centres de radiologie, les hôtels, les bureaux….</p>
+
+  <p class="para">Nous sommes experts dans l’installation de climatisation de précision tout en intégrant la logique éco responsable sur l’ensemble des phases du projet : conception, chantier, gestion des installations et maintenance..</p>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image35.png" alt="">
+                    </div>
+                    <p class="para">Portes automatiques coulissantes
+Les portes automatiques coulissantes sont les modèles les plus universels, s’intégrant harmonieusement à tous les environnements et répondant à toutes les attentes en termes d’accessibilité et confort d’usage.
+.</p>
+  <p class="para">Les domaines d’activité de la société Dinatec sont la climatisation, la ventilation, la réfrigération ainsi que le chauffage.
+Nous sommes en mesure d’effectuer les études et les travaux, la maintenance ainsi que les dépannages.
+Nous nous efforçons de trouver les solutions les plus innovantes et les mieux adaptées à vos besoins.
+.
+</p>
+                 
+ 
+
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image36.png" alt="">
+                    </div>
+                    <p class="para">
+                    Nos domaines d’intervention sont :</p>
+   <p class="para"> Climatisation simple ou réversible</p>
+   <p class="para"> Pompe à chaleur</p>
+   <p class="para"> Ballon d’eau chaude thermodynamique</p>
+   <p class="para"> Plancher chauffant</p>
+   <p class="para"> Centrale de traitement d’air</p>
+   <p class="para"> Réseau de ventilation simple et double flux
+
+</p>
+
+                </div>
+                <!-- Ajoutez d'autres lignes de paragraphe et d'image ici -->
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

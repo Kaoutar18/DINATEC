@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    
+    <style>
+        .row {
+            display: flex; 
+            justify-content: space-around; 
+            margin-bottom: 20px; 
+            width: 100%;
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .para {
+            color: black !important;
+            max-width: 400px;
+            margin-left: 10px;
+        }
+
+        .img-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/imagE6.png" >
+                    </div>
+                    <p class="para">L'entreprise Dinatec intervient dans la pose de revêtements de sol, tant sur des réalisations neuves que dans des projets de réhabilitation, en site occupé ou non. Les revêtements de sols et de murs concernent la sécurité, l’esthétique, le confort thermique, l’acoustique et la santé.</p>
+                    <p class="para">Optez pour un revêtement de sol en harmonie avec votre décoration pour créer un environnement agréable et correspondant à vos envies.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image7.png" alt="Revêtement de sol style scandinave
+">
+                    </div>
+                    <p class="para">Revêtement de sol style scandinave,Revêtement de sol style industriel
+
+</p>
+                    <p class="para">De plus en plus prisée, la décoration style scandinave est définie par des matières naturelles. Pour respecter cette ambiance rien de mieux qu’un revêtement de sol clair, par exemple, un parquet en bois naturel et si votre pièce est déjà revêtue d’un parquet, vous pourrez le repeindre en blanc 
+Composé de bois, acier et métal, si vous souhaitez vous rapprocher du style industriel choisissez plutôt un revêtement de sol intérieur de type dalle stratifiée effet béton noir, par exemple ou plus traditionnel, du carrelage de couleur noire ou imitation béton ciré.
+.</p>
+                </div>
+                  <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image8.png" alt="Revêtement de sol style vintage
+">
+                    </div>
+                    <p class="para">Revêtement de sol style vintage
+</p>
+                    <p class="para">Pour une décoration vintage, le sol en vinyle composé de motifs rétro est une bonne solution. Les carreaux en ciment, avec leurs nombreux motifs et couleur véhiculent un style rétro très apprécié, mais en revanche, ce revêtement de sol intérieur a un coût élevé.
+
+.</p>
+
+                </div>
+                
+
+            </div>
+             <div class="col-md-4 mx-auto">
+                    <div class="img-box">
+                        <img src="images/image9.png" alt="Revêtement de sol style vintage
+">
+                    </div>
+                  
+</p>
+                    <p class="para">
+Entreprise Dinatec intervient dans  les travaux de revêtements de sol, pose de carrelage et parquet, faïence, mosaïques, marbre et granit.
+L’entreprise Dinatec propose son expertise et la compétence de ses compagnons en pose de revêtements de sol souples ou rigides tant auprès des particuliers que des professionnels (entreprises, syndics de copropriété, gestionnaires d’immeubles, collectivités, architectes, etc.).
+.</p>
+
+                </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

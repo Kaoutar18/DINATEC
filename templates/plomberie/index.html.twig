@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+
+        .row {
+            display: flex; /* Utilise Flexbox pour les lignes */
+            justify-content: space-around; /* Aligne les colonnes avec un espace égal */
+            margin-bottom: 20px; /* Espacement entre les lignes */
+            width: 100%; /* Prend toute la largeur */
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Aligne l'image et le texte verticalement */
+            align-items: center; /* Centre les éléments dans la colonne */
+            text-align: center; /* Centre le texte sous chaque image */
+        }
+            .para {
+                color: black !important; /* Couleur du texte en noir */
+                max-width: 400px; /* Largeur maximale pour le texte */
+                margin-left: 10px; /* Espace entre le texte et l'image */
+            }
+
+            .img-box img {
+                width: 200px;  /* Largeur fixe pour les images */
+                height: 200px; /* Hauteur fixe pour rendre les images carrées */
+                object-fit: cover; /* Recadre l'image pour remplir le carré sans déformer */
+                border-radius: 5px; /* Arrondit les coins si souhaité */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet visuel */
+            }
+
+
+    </style>
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image19.png" alt="">
+                    </div>
+                    <p class="para">
+                      Les plombiers de Dinatec, réalisent l'installation des réseaux de traitement et de distribution d'eau, la pose et le raccordement des éléments sanitaires et de la robinetterie, le raccordement des appareils sanitaires au réseau d'eaux usées, ainsi que le travaux sur les canalisations et l'entretien et les réparations des installations existantes.
+ <p class="para"> Nous cultivons la proximité avec nos clients afin de répondre aux mieux à leurs attentes en terme de rapidité et de fiabilité. C'est pourquoi nous avons mis en place un service d'astreinte qui nous permet d'intervenir tous les jours, à toute heure de la journée ou de la nuit.</p>
+
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image20.png" alt="">
+                    </div>
+                    <p class="para">spécialiste en travaux de bâtiment, prend en charge tous vos travaux de plomberie. Son champ d’action s’étend de la pose de canalisations au mitigeur en passant par l’installation de cumulus.
+.</p>
+                    <p class="para">   Vous pouvez également contacter l’entreprise pour ses services de réparation, dégorgement ou recherche de fuites. La société réalise l’adaptation de vos salles de bains pour les personnes à mobilité réduite.
+
+                       </p>
+                 
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image21.png" alt="">
+                    </div>
+                    <p class="para">Vous venez d’acquérir une bâtisse et toute l'installation sanitaire est à refaire ? Vous rencontrez souvent des problèmes sur votre plomberie : bouchons, mauvaises odeurs, bruits étranges ? Dinatec réalise l'installation et la rénovation de vos sanitaires, et intervient en dépannage sur votre système de plomberie.</p>
+                 
+                </div>
+                   <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image22.png" alt="">
+                    </div>
+                    <p class="para">Une urgence en plomberie ? Un problème d’ordre mineur mais qui reste toute fois insurmontable ? Notre équipe de professionnels qualifiés et expérimentés intervient rapidement à votre domicile pour vous sortir de toutes les situations stressantes et désagréables causées par ces problèmes de plomberie.
+.</p>
+                 
+                </div>
+                <!-- Ajoutez d'autres lignes de paragraphe et d'image ici -->
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

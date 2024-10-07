@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+
+        .row {
+            display: flex; /* Utilise Flexbox pour les lignes */
+            justify-content: space-around; /* Aligne les colonnes avec un espace égal */
+            margin-bottom: 20px; /* Espacement entre les lignes */
+            width: 100%; /* Prend toute la largeur */
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Aligne l'image et le texte verticalement */
+            align-items: center; /* Centre les éléments dans la colonne */
+            text-align: center; /* Centre le texte sous chaque image */
+        }
+            .para {
+                color: black !important; /* Couleur du texte en noir */
+                max-width: 400px; /* Largeur maximale pour le texte */
+                margin-left: 10px; /* Espace entre le texte et l'image */
+            }
+
+            .img-box img {
+                width: 200px;  /* Largeur fixe pour les images */
+                height: 200px; /* Hauteur fixe pour rendre les images carrées */
+                object-fit: cover; /* Recadre l'image pour remplir le carré sans déformer */
+                border-radius: 5px; /* Arrondit les coins si souhaité */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet visuel */
+            }
+
+
+    </style>
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image23.png" alt="">
+                    </div>
+                    <p class="para">
+                     La menuiserie est l’art de travailler le bois afin de réaliser des meubles et d’autres objets. 
+C’est également le métier qui permet de valoriser le bois pour l’entretien des bâtiments.
+ <p class="para">Les travaux  assurés par Dinatec sont très variés, mais ils peuvent être regroupés en 03 groupes: </p>
+<p class="para">Les travaux de création et de pose d’ouvertures, Les travaux de fabrication d’escaliers et les travaux d’agencement intérieur.</p>
+<p class="para">La première catégorie concerne les travaux qui permettent une excellente communication entre chaque pièce de votre site.</p>
+<p class="para">Les techniciens de menuiserie auront à poser des portes, ces derniers peuvent être conçus avec différents matériaux (bois, aluminium, PVC, etc.). </p>
+<p class="para">Le choix du type de matériau dépend du gout et des moyens dont vous disposez. </p>
+
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image24.png" alt="">
+                    </div>
+                    <p class="para">La menuiserie extérieure est une autre spécialité de Dinatec,  répond aux normes de qualité de chaque client, et pour tous ses travaux de menuiserie :</p>
+  <p class="para"> Pose de châssis (portes et fenêtres) en BOIS </p>
+  <p class="para"> Pose de terrasse en bois</p>
+  <p class="para"> Bardages</p>
+  <p class="para"> Car port et Portes de garage en bois
+
+.</p>
+               
+                 
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image25.png" alt="">
+                    </div>
+                   <p class="para">Lorsque vous à Dinatec, vous réussirez à réaliser et à poser tous les styles de portes que vous allez choisir : La porte pivotante, La porte à galandage, La porte pliante, La porte battante, La porte en applique…</p>
+<p class="para">Il en est de même pour vos fenêtres. Elles vous aideront à assurer une bonne aération de chacune de vos pièces.</p>
+                 
+                </div>
+                   <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image26.png" alt="">
+                    </div>
+                    <p class="para">Notre service de menuiserie intérieure est qualifié pour tous types d’aménagement ou de rénovation intérieure :
+  <p class="para">Pose de parquets (massif ou stratifié)</p>
+  <p class="para"> Portes intérieures bois</p>
+  <p class="para"> Portes intérieures phoniques</p>
+  <p class="para">Pose d’escaliers</p>
+  <p class="para"> Pose de cloisons </p>
+
+                 
+                </div>
+                <!-- Ajoutez d'autres lignes de paragraphe et d'image ici -->
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

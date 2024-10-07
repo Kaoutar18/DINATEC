@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+
+        .row {
+            display: flex; /* Utilise Flexbox pour les lignes */
+            justify-content: space-around; /* Aligne les colonnes avec un espace égal */
+            margin-bottom: 20px; /* Espacement entre les lignes */
+            width: 100%; /* Prend toute la largeur */
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Aligne l'image et le texte verticalement */
+            align-items: center; /* Centre les éléments dans la colonne */
+            text-align: center; /* Centre le texte sous chaque image */
+        }
+            .para {
+                color: black !important; /* Couleur du texte en noir */
+                max-width: 400px; /* Largeur maximale pour le texte */
+                margin-left: 10px; /* Espace entre le texte et l'image */
+            }
+
+            .img-box img {
+                width: 200px;  /* Largeur fixe pour les images */
+                height: 200px; /* Hauteur fixe pour rendre les images carrées */
+                object-fit: cover; /* Recadre l'image pour remplir le carré sans déformer */
+                border-radius: 5px; /* Arrondit les coins si souhaité */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet visuel */
+            }
+
+
+    </style>
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/img.png" alt="Installation d’un mur en brique">
+                    </div>
+                    <p class="para">
+                        Nos professionnels de la maçonnerie peuvent également intervenir pour :
+                    <p class="para">  Installation d’un mur en brique .</p>
+                    <p class="para">  Installation d’un mur en brique mono mur.</p>
+                    <p class="para"> Installation d’un mur en béton cellulaire.</p>
+                    <p class="para">    Installation d’un mur en parpaing.</p>
+                    <p class="para">    Coulage d’une chape en béton  en extérieur.</p>
+                    <p class="para">    Coulage d’une dalle en béton en intérieur et en extérieur .</p>
+                    <p class="para">    Création d’une dépendance .</p>
+                    <p class="para">    Démolition d’un mur.</p>
+                    <p class="para">    Démolition d’une cloison en Placoplatre .</p>
+                    <p class="para">    Création de fondations .</p>
+                    <p class="para">    Rénovation d’un mur en pierre  pour l’intégralité du bâtiment.</p>
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/img_2.png" alt="Installation d’un mur en béton cellulaire">
+                    </div>
+                    <p class="para">Installation d’un mur en béton cellulaire.</p>
+                    <p class="para">    Notre activité s’oriente essentiellement vers la construction neuve de bâtiments en béton armé,
+                        logements individuels ou collectifs, bureaux, résidences de tourisme,
+                        hôpitaux, écoles, usines, parkings aériens ou enterrés…</p>
+                    <p class="para">   Notre spécialité également dans la réhabilitation et l’extension tous corps d’états de bâtiments existants en site occupé :</p>
+                    <p class="para">    maisons de retraite et logements collectifs, sans oublier la réhabilitation de projets immobiliers en entreprise générale.</p>
+                        Notre entreprise met à votre disposition ses compétences, son expérience, un personnel qualifié et un équipement moderne afin de mener à bien et à votre entière satisfaction tous les travaux.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/img_1.png" alt="Coulage d’une chape en béton en extérieur">
+                    </div>
+                    <p class="para">Coulage d’une chape en béton en extérieur.</p>
+                    <p class="para">   Notre entreprise met à votre disposition ses compétences, son expérience, un personnel qualifié et un équipement moderne afin de mener à bien et à votre entière satisfaction tous les travaux.</p>
+                    <p class="para">     Notre entreprise met à votre disposition ses compétences, son expérience, un personnel qualifié et un équipement moderne afin de mener à bien et à votre entière satisfaction tous les travaux.</p>
+                    </p>
+                </div>
+                <!-- Ajoutez d'autres lignes de paragraphe et d'image ici -->
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+
+        .row {
+            display: flex; /* Utilise Flexbox pour les lignes */
+            justify-content: space-around; /* Aligne les colonnes avec un espace égal */
+            margin-bottom: 20px; /* Espacement entre les lignes */
+            width: 100%; /* Prend toute la largeur */
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Aligne l'image et le texte verticalement */
+            align-items: center; /* Centre les éléments dans la colonne */
+            text-align: center; /* Centre le texte sous chaque image */
+        }
+            .para {
+                color: black !important; /* Couleur du texte en noir */
+                max-width: 400px; /* Largeur maximale pour le texte */
+                margin-left: 10px; /* Espace entre le texte et l'image */
+            }
+
+            .img-box img {
+                width: 200px;  /* Largeur fixe pour les images */
+                height: 200px; /* Hauteur fixe pour rendre les images carrées */
+                object-fit: cover; /* Recadre l'image pour remplir le carré sans déformer */
+                border-radius: 5px; /* Arrondit les coins si souhaité */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet visuel */
+            }
+
+
+    </style>
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image37.png" alt="">
+                    </div>
+                    <p class="para">
+Nous répondons à vos besoins pour l’entretien et la maintenance, réalise également le nettoyage de votre ascenseur,  la rénovation des cabines, Nous vérifions aussi son niveau de sécurité afin de s’assurer de l’efficacité des serrures des portes palières.</p>
+ <p class="para"> Avec un réseau de 11 marques couvrant une grande partie du Maroc, Dinatec se distingue en tant qu’intégrateur de solutions, offrant des services adaptés aux besoins spécifiques de chaque client grâce à sa connaissance approfondie du territoire et de ses attentes.
+Particularités qui font de Dinatec un partenaire fiable pour répondre efficacement aux défis complexes de la mobilité verticale de ses clients.
+.</p>
+
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image38.png" alt="">
+                    </div>
+                    <p class="para">Des engagements forts pour la qualité et la sécurité de vos projets
+<p class="para">SÉCURITÉ</p>
+La sécurité de nos passagers comme celle de nos collaborateurs ne tolère aucun compromis.
+<p class="para">ÉTHIQUE</p>
+L’éthique est au cœur de nos prises de décisions et de nos actions quotidiennes.
+<p class="para">QUALITÉ</p>
+Nous nous attachons à respecter les standards les plus rigoureux afin de vous délivrer la meilleure qualité de prestation possible.
+<p class="para">PLURALITÉ</p>
+La diversité de nos équipes, savoir-faire et marques est un atout unique
+
+.</p>
+                   
+                 
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image39.png" alt="">
+                    </div>
+                    <p class="para">L’élévateur PMR, en tant qu’alternative pratique à l’ascenseur, favorise la mobilité et l’accessibilité des personnes à mobilité réduite. En comparaison avec un ascenseur, son installation requiert moins de travaux d’aménagement, et les coûts de maintenance demeurent minimes, Dinatec est votre expert en monte-charge pour professionnel et en monte-charge pour particulier.</p>
+                    <p class="para">  Si vous avez besoin de conseils pour choisir votre monte-charge, nos équipes se tiennent à votre disposition à chaque instant. En tant que spécialiste en monte-charges, notre entreprise est en mesure d’identifier vos besoins et de vous orienter vers le modèle parfait pour vous. 
+Nos modèles allient simplicité, durabilité, robustesse et confort
+.</p>
+                 
+                </div>
+                   <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image40.png" alt="">
+                    </div>
+                    <p class="para">De l’installation standard à l’ascenseur sur-mesure et aux équipements spécifiques,  confiez-nous la création, l’installation, la modernisation et la maintenance de vos équipements.
+
+.</p>
+                 
+                </div>
+                <!-- Ajoutez d'autres lignes de paragraphe et d'image ici -->
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

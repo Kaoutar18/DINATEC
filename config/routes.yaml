@@ -48,10 +48,46 @@ ces:
 
 
 Maçonnerie :
-    path: /maconnerie
+    path: /Maçonnerie
     controller: App\Controller\MaconnerieContollerController::Maçonnerie
 
+revetementdesolemur :
+    path: /revetementdesolemur
+    controller: App\Controller\RevetementdesolemurController ::revetementdesolemur
+    
+
+carrelage :
+    path: /carrelage
+    controller: App\Controller\CarrelageController::carrelage
+
+
+paterie :
+    path: /paterie
+    controller: App\Controller\PaterieController::paterie
+
+
+peinture :
+    path: /peinture
+    controller: App\Controller\PaterieController::peinture
+
+plomberie :
+    path: /plomberie
+    controller: App\Controller\PlomberieController::index
 
 
 
+menuiseriebois :
+    path: /menuiseriebois
+    controller: App\Controller\menuiserieboisController::index
 
+menuiseriealimunium:
+    path: /menuiseriealimunium
+    controller: App\Controller\MenuiseriealimuniumController::menuiseriealimunium
+
+climatisation:
+    path: /climatisation 
+    controller: App\Controller\ClimatisationController::climatisation 
+
+asenceurs:
+    path: /asenceurs 
+    controller: App\Controller\AsenceursController::asenceurs 

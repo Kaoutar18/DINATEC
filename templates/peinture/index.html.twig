@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+
+        .row {
+            display: flex; /* Utilise Flexbox pour les lignes */
+            justify-content: space-around; /* Aligne les colonnes avec un espace égal */
+            margin-bottom: 20px; /* Espacement entre les lignes */
+            width: 100%; /* Prend toute la largeur */
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Aligne l'image et le texte verticalement */
+            align-items: center; /* Centre les éléments dans la colonne */
+            text-align: center; /* Centre le texte sous chaque image */
+        }
+            .para {
+                color: black !important; /* Couleur du texte en noir */
+                max-width: 400px; /* Largeur maximale pour le texte */
+                margin-left: 10px; /* Espace entre le texte et l'image */
+            }
+
+            .img-box img {
+                width: 200px;  /* Largeur fixe pour les images */
+                height: 200px; /* Hauteur fixe pour rendre les images carrées */
+                object-fit: cover; /* Recadre l'image pour remplir le carré sans déformer */
+                border-radius: 5px; /* Arrondit les coins si souhaité */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet visuel */
+            }
+
+
+    </style>
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image.png" alt="">
+                    </div>
+                    <p class="para">
+                       Nous vous proposons des solutions pour vos travaux de peinture et de décoration :
+   <p class="para">Des plus petites surfaces (mur, plafond, une pièce), aux plus grandes (studio, appartement, bureaux…)</p>
+   <p class="para"> Travaux de décoration, ou de remise en état suite à un dégât des eaux
+Une cage d’escalier</p>
+   <p class="para"> Pour des finitions très soignées ou encire pour des travaux de rafraîchissement plus économiques
+
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image16.png" alt="">
+                    </div>
+                    <p class="para">Envi de fantaisie et d’un peu d’originalité dans votre intérieur ? Vous pouvez décorer votre intérieur avec de la peinture à effets. Effectivement, la peinture décorative est actuellement très en vogue. Découvrez de nombreuses peintures murales à effets décoratifs donnant un style unique et très moderne à votre bien immobilier.
+.</p>
+                    <p class="para">    Nous sommes bien évidemment à votre disposition pour la pose de cette peinture. Nous proposons tous les effets souhaités : faux marbre, stucco, porte en faux bois, peinture à l’éponge, vernis, peinture à la chaux, effet pailleté, effet béton, effet métallisé, effet sablé, etc.</p>
+
+                    <p class="para">   Notre spécialité également dans la réhabilitation et l’extension tous corps d’états de bâtiments existants en site occupé :</p>
+                
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image18.png" alt="">
+                    </div>
+                    <p class="para">Nous proposons tous les effets souhaités : faux marbre, stucco, porte en faux bois, peinture à l’éponge, vernis, peinture à la chaux, effet pailleté, effet béton, effet métallisé, effet sablé, etc.</p>
+                    <p class="para">  Un nuancier est mis à votre disposition afin que vous puissiez choisir la couleur exacte que vous souhaitez. Bien sûr, nous sommes présents pour vous offrir des conseils personnalisés dans le domaine, pour le choix de la peinture (couleur et effet), tout en nous adaptant à votre budget.</p>
+
+                 
+                </div>
+                <!-- Ajoutez d'autres lignes de paragraphe et d'image ici -->
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

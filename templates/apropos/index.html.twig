@@ -6,11 +6,14 @@
     {% block header %}
         {{ parent() }}
     {% endblock %}
-
+    <style>
+    .para{
+        color:black !important;
+    }
+    </style>
 
     {% block about %}
-
-        <section class="about_section">
+        <section class="about_section" style="background-color: white;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-5 offset-md-1">
@@ -29,7 +32,6 @@
                                 Le développement de la Société s'organise autour de grands comptes marocains de l'Industrie et des Services, de Collectivités locales, des Hôtels ainsi que de PME / PMI.
                                 Avec une quinzaine d'années d'expérience, l'équipe DINATEC offre à ses clients des prestations d’installation « clé en main » incluant les nouvelles technologies.
                             </p>
-
                         </div>
                     </div>
                     <div class="col-md-6 px-0">
@@ -40,9 +42,9 @@
                 </div>
             </div>
         </section>
-
         <!-- about section ends -->
     {% endblock %}
+    
     {% block footer %}
         {{ parent() }}
     {% endblock %}

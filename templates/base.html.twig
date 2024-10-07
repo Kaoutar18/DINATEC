@@ -40,6 +40,27 @@
         position: relative;
         z-index: 1000;
     }
+    .header_section {
+    background-color: #003366; /* Bleu ciel */
+    color: black; /* Texte noir */
+}
+
+.header_section a {
+    color: black; /* Liens en noir */
+}
+
+.header_section .navbar-brand {
+    color: black; /* Couleur du nom de la marque en noir */
+}
+
+.header_section .navbar-nav .nav-link {
+    color: black; /* Liens de navigation en noir */
+}
+
+.header_section .navbar-nav .nav-link:hover {
+    color: darkgray; /* Optionnel : couleur au survol */
+}
+
 
 
 
@@ -150,19 +171,19 @@
                                         <li class="dropdown-submenu">
                                             <a class="dropdown-item" href="{{ path('tce') }}">Tous Corps d'Etats (TCE)</a>
                                             <ul class="dropdown-menu sub-menu tce-submenu">
-                                                <li><a class="dropdown-item" href="{{ path('Maçonnerie') }}" >Maconnerie</a></li>
-                                                <li><a class="dropdown-item" href="TCE_Renovation.html">    Revêtements de sols et de mur
+                                                <li><a class="dropdown-item" href="{{ path('Maçonnerie') }}" >Maçonnerie</a></li>
+                                                <li><a class="dropdown-item" href="{{ path('revetementdesolemur') }}">Revêtements de sols et de mur
                                                     </a></li>
-                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Carrelage</a></li>
-                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Platerie</a></li>
-                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Peinture</a></li>
-                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Plomberie </a></li>
-                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Menuiserie du Bois </a></li>
-                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Menuiserie Aluminium & PVC
+                                                <li><a class="dropdown-item" href="{{ path('carrelage') }} ">Carrelage</a></li>
+                                                <li><a class="dropdown-item" href="{{ path('paterie') }} ">Plâtrerie
+</a></li>
+                                                <li><a class="dropdown-item" href="{{ path('peinture') }}">Peinture</a></li>
+                                                <li><a class="dropdown-item" href="{{ path('plomberie') }}">Plomberie </a></li>
+                                                <li><a class="dropdown-item" href="{{ path('menuiseriebois') }}">Menuiserie du Bois </a></li>
+                                                <li><a class="dropdown-item" href="{{ path('menuiseriealimunium') }}">Menuiserie Aluminium & PVC
                                                     </a></li>
-                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Plomberie </a></li>
-                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Climatisation  </a></li>
-                                                <li><a class="dropdown-item" href="TCE_Maintenance.html">Ascenseurs   </a></li>
+                                                <li><a class="dropdown-item" href="{{ path('climatisation') }}">Climatisation  </a></li>
+                                                <li><a class="dropdown-item" href="{{ path('asenceurs') }}">Ascenseurs   </a></li>
                                                 <li><a class="dropdown-item" href="TCE_Maintenance.html">Portes Automatiques
                                                     </a></li>
                                             </ul>

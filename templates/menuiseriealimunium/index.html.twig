@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+
+        .row {
+            display: flex; /* Utilise Flexbox pour les lignes */
+            justify-content: space-around; /* Aligne les colonnes avec un espace égal */
+            margin-bottom: 20px; /* Espacement entre les lignes */
+            width: 100%; /* Prend toute la largeur */
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Aligne l'image et le texte verticalement */
+            align-items: center; /* Centre les éléments dans la colonne */
+            text-align: center; /* Centre le texte sous chaque image */
+        }
+            .para {
+                color: black !important; /* Couleur du texte en noir */
+                max-width: 400px; /* Largeur maximale pour le texte */
+                margin-left: 10px; /* Espace entre le texte et l'image */
+            }
+
+            .img-box img {
+                width: 200px;  /* Largeur fixe pour les images */
+                height: 200px; /* Hauteur fixe pour rendre les images carrées */
+                object-fit: cover; /* Recadre l'image pour remplir le carré sans déformer */
+                border-radius: 5px; /* Arrondit les coins si souhaité */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet visuel */
+            }
+
+
+    </style>
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image30.png" alt="Installation d’un mur en brique">
+                    </div>
+                    <p class="para">
+                     Portails
+Fabrication artisanale et sur mesure de tous vos souhaits.Dinatec possède son propre atelier de fabrication pour vos réalisations en acier.</p>
+  <p class="para">Volets</p>
+  <p class="para">Les protections solaires, Volets roulants, battants, stores extérieurs / intérieurs, brise soleil orientable, les choix sont multiples et vous apportent un véritable confort de vie.</p>
+  <p class="para">Tertiaires</p>
+  <p class="para">Notre savoir-faire nous permet de répondre aux exigences des Architectes pour la réalisations de locaux commerciaux, bureaux… </p>
+  <p class="para">Châssis en formes</p>
+  <p class="para">Pour le neuf ou la rénovation : Réalisation de tous types de forme en menuiseries aluminium, cintrage, découpe laser, façonnage….Nous sommes capables de répondre à l’ensemble de vos attentes.</p>
+
+                  
+
+                  
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image27.png" alt="Installation d’un mur en béton cellulaire">
+                    </div>
+                    <p class="para">Spécialiste de la pose de menuiseries et de l’isolation, Dinatec vous propose une large gamme de Menuiseries Aluminium & PVC : fenêtres, portails, portes de garage et portes d’entrée. Chez Dinatec, nous nous occupons de réaliser toutes sortes de menuiseries extérieures sur mesure, nous nous adaptons aux goûts de chaque client, réalisant des travaux dans un style moderne, classique, original, bohème, rustique... Quel que soit le style que vous souhaitez donner à votre projet de menuiserie extérieure, chez Dinatec, nous nous engageons à en faire une réalité.</p>
+                 Neuf
+   <p class="para">Réalisations de l’ensemble des fermetures de votre construction. Fenêtre, porte fenêtre, volets, portail….En Aluminium ou en PVC, nous mettons notre savoir faire à votre service.
+Rénovations</p>
+   <p class="para">Dinatec est spécialisé dans tout type de rénovation : de votre habitation principale ou secondaire à des collectifs ou immeubles anciens. Le tout dans le respect du caractère originel de votre construction.</p>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image28.png" alt="Coulage d’une chape en béton en extérieur">
+                    </div>
+                    <p class="para">Vérandas</p>
+<p class="para">Cœur de notre activité: la véranda.
+<p class="para">De multiples contacts nous ont fait confiance pour la réalisation de leur véranda.</p>
+<p class="para">Véritable pièce supplémentaire, elle sublimera et apportera un nouveau souffle à votre habitation.</p>
+<p class="para">Nous sommes capables de répondre à l’ensemble de vos attentes.</p>
+
+                </div>
+                <!-- Ajoutez d'autres lignes de paragraphe et d'image ici -->
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}

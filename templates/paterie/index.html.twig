@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maconnerie !{% endblock %}
+
+{% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <style>
+
+        .row {
+            display: flex; /* Utilise Flexbox pour les lignes */
+            justify-content: space-around; /* Aligne les colonnes avec un espace égal */
+            margin-bottom: 20px; /* Espacement entre les lignes */
+            width: 100%; /* Prend toute la largeur */
+        }
+
+        .col-md-4 {
+            display: flex;
+            flex-direction: column; /* Aligne l'image et le texte verticalement */
+            align-items: center; /* Centre les éléments dans la colonne */
+            text-align: center; /* Centre le texte sous chaque image */
+        }
+            .para {
+                color: black !important; /* Couleur du texte en noir */
+                max-width: 400px; /* Largeur maximale pour le texte */
+                margin-left: 10px; /* Espace entre le texte et l'image */
+            }
+
+            .img-box img {
+                width: 200px;  /* Largeur fixe pour les images */
+                height: 200px; /* Hauteur fixe pour rendre les images carrées */
+                object-fit: cover; /* Recadre l'image pour remplir le carré sans déformer */
+                border-radius: 5px; /* Arrondit les coins si souhaité */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre pour effet visuel */
+            }
+
+
+    </style>
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image13.png" alt="">
+                    </div>
+                    <p class="para">
+                       Dinatec assure les différents travaux de plâtrerie pour changer l’intérieur dans sa maison, dans son bureau, ou dans son local industriel, le plâtre est une excellente alternative, car cela confère un aspect authentique et un charme incroyable, notamment avec l’ajout de cloisons en plâtre, de cloisons simples ou amovibles, avec du doublage de plaques de plâtre et des contre-plafonds par exemple. 
+Les possibilités sont multiples, assurément. Le plâtre peut se poser sur n’importe quel support et pour chaque envie, pour chaque exigence, il existe une solution en travaux de plâtrerie.
+<p>Des travaux pour tous types de bâtiments
+Pour une rénovation ou un aménagement complémentaire, temporaire ou permanent, les travaux de plâtrerie sont toujours réalisés avec minutie et probité par notre professionnel averti dont le savoir-faire, les connaissances techniques et les compétences en la matière ne sont plus à démontrer. 
+Les travaux de plâtrerie peuvent concerner tout ce qui se trouve dans un habitat comme un aménagement de combles pour libérer de la place et augmenter son volume de surface habitable, mais aussi des faux-plafonds, de l’isolation avec des plaques de plâtre.
+</p>
+
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image15.png" alt="">
+                    </div>
+                    <p class="para">Installation d’un mur en béton cellulaire.</p>
+                    <p class="para">    Dinatec assure diffèrent types de travaux de plâtrerie:</p>
+ <p class="para">  Pose de plaques de plâtre  </p>
+ <p class="para">  Isolation de cloisons </p>
+ <p class="para">  Doublage de cloisons </p>
+ <p class="para">  Isolation phonique et thermique </p>
+ <p class="para">  Aménagement de combles </p>
+ <p class="para">  Pose de fenêtres de toit </p>
+ <p class="para">  Pose de faux-plafonds </p>
+ <p class="para">  Création de planchers </p>
+ <p class="para">  Création de supports pour une nouvelle cuisine par exemple  </p>
+ <p class="para">  Installation d’une voûte</p>
+ <p class="para">  Fabrication de mobilier de rangement (étagères, meubles).</p>
+
+                  
+                </div>
+                <div class="col-md-4">
+                    <div class="img-box">
+                        <img src="images/image14.png" alt="">
+                    </div>
+                    <p class="para">La cloison de doublage est également appelée contre-cloison. Elle est en général posée près d'un mur donnant sur l'extérieur, afin d'améliorer les performances énergétiques et acoustiques du logement. Un espace suffisant doit impérativement être laissé entre l'ouvrage en plâtre et le mur, afin de laisser ce dernier respirer et ainsi éviter le développement de moisissures et champignons.</p>
+                  
+                </div>
+                <!-- Ajoutez d'autres lignes de paragraphe et d'image ici -->
+            </div>
+        </div>
+    </section>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+{% endblock %}
